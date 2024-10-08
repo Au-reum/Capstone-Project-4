@@ -18,10 +18,11 @@ app.post("/random", async (req, res) => {
     try {
         const result = await axios.get(API_URL);
         res.render("riddles.ejs", {
-            riddles: result.data.riddle
+            riddles: result.data.riddle,
+            answers: result.data.answer
         });
     } catch (error) {
-        console.log(error.response.data);
+        console.log(error.result.data);
         res.status(500);
     }
 });
@@ -31,10 +32,11 @@ app.get("/random", async (req, res) => {
     try {
         const result = await axios.get(API_URL);
         res.render("riddles.ejs", {
-            riddles: result.data.riddle
+            riddles: result.data.riddle,
+            answers: result.data.answer
         });
     } catch (error) {
-        console.log(error.response.data);
+        console.log(error.result.data);
         res.status(500);
     }
 });

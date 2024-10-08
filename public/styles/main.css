@@ -92,6 +92,17 @@ button:hover {
     margin: 10px 0 20px;
 }
 
+.answer {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+}
+
+.card-content:hover .answer {
+    visibility: visible;
+    opacity: 1;
+}
+
 @media (max-width: 768px) {
     .card-content {
         width: 70%;
