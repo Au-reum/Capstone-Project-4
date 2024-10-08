@@ -1,0 +1,141 @@
+body {
+    background: linear-gradient(135deg, #72BF78, #A0D683, #D3EE98, #FEFF9F);
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+h1 {
+    color: black;
+}
+
+.reload {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.322);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 80vh;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.card-content .back {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #B6FFA1, #FEFFA7);
+    box-shadow: 0 8px 16px rgba(52, 163, 0, 0.521);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.card-content .back:hover { 
+    color: white;
+    box-shadow: 0 8px 16px rgba(52, 163, 0, 0.744);
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.322);
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    color: white;
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.644);
+}
+
+.card-content {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(255, 77, 77, 0.322);
+    width: 350px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: black;
+    margin: 10px 0 20px;
+}
+
+@media (max-width: 768px) {
+    .card-content {
+        width: 70%;
+    }
+
+    .reload {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    button {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .card-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .reload {
+        width: 90%;
+        padding: 15px;
+    }
+
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
